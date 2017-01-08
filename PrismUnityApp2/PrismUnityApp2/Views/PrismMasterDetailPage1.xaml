@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage
+    x:Class="PrismUnityApp2.Views.PrismMasterDetailPage1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True" Title="MasterDetailPage" MasterBehavior="Popover">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Default">
+            <StackLayout>
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="PrismNavigationPage1/PrismTabbedPage1"
+                    Text="PrismTabbedPage" />
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="PrismNavigationPage1/PrismContentPage2"
+                    Text="Page 2" />
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="PrismNavigationPage1/PrismContentPage3"
+                    Text="Page3" />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
